@@ -1,0 +1,149 @@
+<html>
+     <head>
+          <link rel="stylesheet" href="../static/css/bootstrap.css">
+
+         <style type="text/css">
+
+             h3{
+                 color: black;
+                 text-align: center;
+             }
+             hr{
+                 border: ridge black;
+                 width: 60%;
+             }
+             a{
+                 background-color: deepskyblue;
+                 color: whitesmoke;
+                 padding: 1%;
+                 text-decoration: none ;
+                 text-decoration-color: white;
+             }
+             i
+             {
+                 color: red;
+             }
+             body{
+                 background-color: aliceblue;
+             }
+
+             div{
+                 padding: 1.5%;
+                 text-align: center;
+             }
+            form{
+                border: outset transparent;
+                text-align: center;
+                background-color: transparent;
+            }
+             h2{
+                 text-align:center;
+                 color: white;
+                 text-decoration: underline;
+             }
+             table{
+                 margin: auto;
+                 color: black;
+
+             }
+             b{
+                 color: red;
+                 margin-right: auto;
+             }
+             body{
+                 background-color: #0b0434;
+             }
+             #x{
+            color: white;
+             }
+
+
+
+         </style>
+
+
+           </head>
+         <h1 class="jumbotron text-center">TRANSPORT MANAGEMENT SYSTEM</h1>
+         <h3> Online Booking!</h3>
+         <hr>
+
+         <div>
+            <a href="/adminhomepage">HOME</a>
+            <a href ="/schedule">SCHEDULE</a>
+            <a href="/booking">Register</a>
+            <a href="/search">search </a>
+            <a href="/complaints">CHATS </a>
+            <a href="/logout">LOGOUT</a>
+                  <br><br>
+
+
+              <img src="../static/bus-pariwisata-nusantara-terbesar-di-indonesia-1.jpg" alt=""width="600" height="400">
+</div>
+
+{{ msg }}
+     <section>
+     <div class="row col-md-5">
+
+
+         <form action="/search" method="POST">
+             <br>
+
+             <input type="tel" name="mobile" placeholder="Phone Number">
+
+             <br><i>{{ msg5 }}</i><br>
+
+             <input class="btn btn-success" type="submit" value="SEARCH CLIENT">
+             <input class="btn btn-success" type="reset">
+
+         </form>
+     </div>
+     <b>{{ error }}</b>
+<div class="col-md-7">
+     <h2 class="text-left"> Results:</h2>
+
+        <table class="table" border="1" width="80%">
+         {% for item in results %}
+
+             <tr id="x">
+                 <td>{{ item[0] }}</td>
+                 <td>{{ item[1] }}</td>
+                 <td>{{ item[2] }}</td>
+                 <td>{{ item[3] }}</td>
+                 <td>{{ item[4] }}</td>
+                 <td>{{ item[5] }}</td>
+                 <td>{{ item[6] }}</td>
+                 <td>{{ item[7] }}</td>
+
+
+             </tr>
+
+
+         {% endfor %}
+
+
+
+        </table>
+</div>
+
+
+
+     </section>
+
+
+   <body>
+
+
+
+   </body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

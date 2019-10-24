@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <style type="text/css">
+        h1 {
+            color: blue;
+            font-family: "Baskerville Old Face";
+            text-align: center;
+        }
+        h2{
+            color: white;
+        }
+
+        h3{
+            color: deepskyblue;
+            font-family: "Century Gothic";
+            text-align: center;
+        }
+        hr{
+            border: groove darkblue;
+            width: 60%;
+        }
+        h4{
+            text-align: center;
+        }
+        a{
+            background-color: deepskyblue;
+            color: whitesmoke;
+            padding: 1%;
+            text-decoration: none ;
+            text-decoration-color: darkblue;
+            text-align: center;
+             }
+        div{
+            text-align: center;
+        }
+         form{
+                text-align: center;
+                background-color: transparent;
+            }
+        b{
+            color: white;
+            size: 18pt;
+        }
+        i{
+            color: red;
+        }
+
+        body{
+            background-color: whitesmoke;
+        }
+        h2{
+            text-align: center;
+            color: black;
+        }
+         body{
+            background: #0b0434 center ;
+            background-size: cover;
+        }
+         #x{
+            color: white;
+        }
+
+
+
+    </style>
+
+</head>
+
+ <h1 class="jumbotron"> TRANSPORT MANAGEMENT SYSTEM</h1>
+ <h3 id="x"> Book a Ticket </h3>
+ <h4 id="x"> Online Booking</h4>
+   <hr>
+
+ <body>
+
+ <div>
+<a href="/">HOME</a>
+<a href="/schedule">SCHEDULE</a>
+<a href="/booking">TICKET BOOKING</a>
+<a href="/twowaybooking">TWO WAY BOOKING</a>
+<a href="/complaints">COMPLAINTS </a>
+<a href="/admin ">ADMIN</a>
+
+</div>
+ <br><br>
+ 
+
+
+ <section class="row container-fluid">
+             <div class="col-md-4">
+
+                 <img src="../static/bus-pariwisata-nusantara-terbesar-di-indonesia-1.jpg" alt=""width="640" height="360">
+
+             </div>
+
+
+ <div class="col-md-8">
+
+      <b><h2 id="x"> TRANSPORT MANAGEMENT SYSTEM </h2></b> <br>
+         <h2 id="x">BOOKING FORM </h2>
+     <h3 id="x"> One way </h3>
+
+
+     <form action="/twowaybooking" method="POST">
+            <p> <b>First Name * </b> <i>{{ msg1 }}</i> </p>
+             <input type="text" name="fname" placeholder="Enter your First Name">
+             <br>
+             <p> <b>Last Name *</b> <i>{{ msg2 }}</i> </p>
+             <input type="text" name="lname" placeholder="Enter your Last Name">
+             <br>
+             <p> <b>Email Address*</b> <i>{{ msg3 }}</i> </p>
+             <input type="email" name="email" placeholder="Enter your Email Address">
+             <br>
+             <p> <b>Phone Number*</b> <i>{{ msg4 }}</i> </p>
+             <input type="tel" name="mobile" placeholder="Enter your Phone Number">
+             <br>
+             <p><b> Booking Number *</b> <i>{{ msg5 }}</i> </p>
+             <input type="number" name="booking" placeholder="Enter your booking Number">
+             <br>
+             <p> <b>Travelling Date *</b> <i>{{ msg6 }}</i> </p>
+             <input type="date" name="date" placeholder="Departure date">
+             <br>
+             <p><b>Select Time to travel*</b> <i>{{ msg7 }}</i> </p>
+         <label>
+             <input type="radio" name="time" value="7:00 A.M" checked>
+         </label> 7:00 A.M<br>
+         <label>
+             <input type="radio" name="time" value="9:00 A.M" checked>
+         </label> 9:00 A.M<br>
+         <label>
+             <input type="radio" name="time" value="1:00 P.M" checked>
+         </label> 1:00 P.M<br>
+             <p> <b>Mpesa Confirmation Number *</b> <i>{{ msg8 }}</i> </p>
+             <input type="text" name="number" placeholder="Enter the confirmation number">
+             <br><br>
+             <input type="submit" value="BOOK TICKET">
+             <input type="reset">
+     </form>
+ </div>
+ </section>
+
+
+</body>
+</html>
